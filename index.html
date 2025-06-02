@@ -8,97 +8,133 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <h1>Privacy-as-a-Service PT</h1>
-            <p>Proteção de dados simplificada</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt pulse"></i>
+                <h1>Privacy-as-a-Service PT</h1>
+            </div>
+            <p class="tagline">Soluções <span>RGPD-Compliant</span></p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#cases">Cases</a></li>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link hover-underline">Home</a></li>
+                <li><a href="#servicos" class="nav-link hover-underline">Serviços</a></li>
+                <li><a href="#sobre" class="nav-link hover-underline">Sobre</a></li>
+                <li><a href="#contato" class="nav-link hover-underline">Contato</a></li>
+                <li><a href="#diagnostico" class="cta-nav slide-bg">Diagnóstico Grátis</a></li>
             </ul>
         </nav>
+        <button class="menu-mobile"><i class="fas fa-bars"></i></button>
     </header>
 
-    <!-- Seção Home -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Proteja seus dados e evite multas de €20 milhões com a RGPD</h2>
-            <p>Remoção de rastros digitais + consultoria jurídica integrada</p>
-            <button id="cta-button" class="cta-button">Faça seu diagnóstico gratuito</button>
-        </div>
-        <div class="hero-icons">
-            <i class="fas fa-shield-alt"></i>
-            <i class="fas fa-gavel"></i>
-            <i class="fas fa-globe"></i>
-        </div>
-    </section>
-
-    <!-- Seção Sobre Nós -->
-    <section id="sobre" class="about">
-        <h2>Sobre Nós</h2>
-        <p>Nascemos em 2025 para tornar a privacidade digital acessível em Portugal.</p>
-        <div class="team">
-            <div class="member">
-                <img src="https://via.placeholder.com/150" alt="Pedro Lopes">
-                <h3>Pedro Lopes</h3>
-                <p>Especialista em TI</p>
+            <h2 class="slide-up">Proteja seus dados e evite multas de <span class="highlight">€20 milhões</span></h2>
+            <p class="fade-in"><i class="fas fa-check-circle"></i> Remoção de rastros digitais em 48h</p>
+            <p class="fade-in"><i class="fas fa-check-circle"></i> Consultoria jurídica especializada</p>
+            <div class="hero-buttons">
+                <button class="cta-button pulse"><i class="fas fa-search"></i> Diagnóstico Gratuito</button>
+                <button class="cta-button secondary"><i class="fas fa-play"></i> Ver Demonstração</button>
             </div>
-            <div class="member">
-                <img src="https://via.placeholder.com/150" alt="Alfredo Neves">
-                <h3>Alfredo Neves</h3>
-                <p>Advogado RGPD</p>
+        </div>
+        <div class="hero-visual">
+            <div class="shield-container rotate">
+                <i class="fas fa-shield-alt"></i>
+                <div class="badge pop">
+                    <i class="fas fa-certificate"></i>
+                    Certificado RGPD
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Serviços -->
+    <!-- Serviços -->
     <section id="servicos" class="services">
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Remoção de dados de people-search sites (ex.: EU Whois)</li>
-            <li>Treinamentos Anti-Vigilância para equipas</li>
-            <li>Selo "Site RGPD-Compliant" para PMEs</li>
-        </ul>
-    </section>
+        <h2 class="section-title">Nossos <span>Serviços</span></h2>
+        <p class="section-subtitle">Soluções completas para sua privacidade digital</p>
+        
+        <div class="service-grid">
+            <!-- Serviço 1 -->
+            <div class="service-card scale-hover">
+                <div class="service-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Remoção Básica</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> 3 sites de people-search</li>
+                    <li><i class="fas fa-check"></i> Relatório detalhado</li>
+                    <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                </ul>
+                <p class="price">€49,99/mês</p>
+                <button class="buy-button slide-bg" data-product="basico">Contratar</button>
+            </div>
 
-    <!-- Seção Contato -->
-    <section id="contato" class="contact">
-        <h2>Contato</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Nome completo" required>
-            <input type="text" placeholder="Nome da empresa" required>
-            <select required>
-                <option value="">Selecione o segmento</option>
-                <option value="saude">Saúde</option>
-                <option value="direito">Direito</option>
-                <option value="ecommerce">E-commerce</option>
-            </select>
-            <textarea placeholder="Descreva seu problema" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+            <!-- Serviço 2 (Destaque) -->
+            <div class="service-card highlight scale-hover">
+                <div class="popular-badge">POPULAR</div>
+                <div class="service-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Pacote Premium</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Remoção em 48h</li>
+                    <li><i class="fas fa-check"></i> Consultoria jurídica</li>
+                    <li><i class="fas fa-check"></i> Selo de compliance</li>
+                    <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                </ul>
+                <p class="price">€199,99/mês</p>
+                <button class="buy-button slide-bg" data-product="premium">Contratar</button>
+            </div>
 
-    <!-- Seção Cases -->
-    <section id="cases" class="cases">
-        <h2>Cases de Sucesso</h2>
-        <div class="case">
-            <h3>Cliente X (advogado)</h3>
-            <p>Removemos 128 menções ilegais em 72h.</p>
-            <p><strong>Redução de 95% na exposição digital.</strong></p>
+            <!-- Serviço 3 -->
+            <div class="service-card scale-hover">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Monitoramento</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Alertas de vazamentos</li>
+                    <li><i class="fas fa-check"></i> Relatórios mensais</li>
+                    <li><i class="fas fa-check"></i> Dashboard online</li>
+                </ul>
+                <p class="price">€99,99/mês</p>
+                <button class="buy-button slide-bg" data-product="monitoramento">Contratar</button>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Privacy-as-a-Service PT. Todos os direitos reservados.</p>
-        <p>Parceria com a CNPD</p>
-    </footer>
+    <!-- Modal de Pagamento -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content scale-in">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-lock"></i> Finalizar Compra: <span id="product-name"></span></h3>
+            <form id="payment-form" class="payment-form">
+                <div class="input-group">
+                    <label><i class="fas fa-credit-card"></i> Número do Cartão</label>
+                    <input type="text" placeholder="4242 4242 4242 4242" pattern="\d{16}" required>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label><i class="fas fa-calendar"></i> Validade</label>
+                        <input type="text" placeholder="MM/AA" pattern="\d{2}/\d{2}" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-lock"></i> CVV</label>
+                        <input type="text" placeholder="123" pattern="\d{3}" required>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button pulse">
+                    <i class="fas fa-euro-sign"></i> Confirmar Pagamento
+                </button>
+            </form>
+            <div class="secure-payment">
+                <i class="fas fa-shield-alt"></i> Pagamento 100% seguro
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
