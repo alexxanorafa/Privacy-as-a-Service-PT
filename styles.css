@@ -516,3 +516,151 @@ body {
         transform: none;
     }
 }
+/* Seção Sobre */
+.about-section {
+    padding: 6rem 10%;
+    background: var(--light);
+}
+
+.about-grid {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.about-text, .team {
+    flex: 1;
+}
+
+.about-text h3, .team h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--primary);
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.team-members {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.member {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    flex: 1;
+}
+
+.member-icon {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.member h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+/* Seção Contatos */
+.contact-section {
+    padding: 6rem 10%;
+    background: white;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-top: 0.3rem;
+}
+
+.info-item h4 {
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-grid, .contact-grid {
+        flex-direction: column;
+    }
+    
+    .team-members {
+        flex-direction: column;
+    }
+}
