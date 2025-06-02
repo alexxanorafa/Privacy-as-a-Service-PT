@@ -111,5 +111,56 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.section-subtitle').style.transform = 'translateY(20px)';
     document.querySelector('.section-subtitle').style.transition = 'all 0.6s ease-out 0.2s';
 });
+// Animação dos números na seção Sobre
+function animateStats() {
+    const stats = document.querySelectorAll('.stat-number');
+    const speed = 200;
+    
+    stats.forEach(stat => {
+        const target = +stat.getAttribute('data-count');
+        const count = +stat.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+            stat.innerText = Math.ceil(count + increment);
+            setTimeout(animateStats, 1);
+        } else {
+            stat.innerText = target;
+        }
+    });
+}
 
+// Observador para animar quando a seção for visível
+const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateStats();
+            aboutObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+aboutObserver.observe(document.querySelector('.about-section'));
+
+// Validação do formulário de contato
+document.querySelector('.contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submitButton = e.target.querySelector('button');
+    
+    // Simulação de envio
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    submitButton.disabled = true;
+    
+    setTimeout(() => {
+        submitButton.innerHTML = '<i class="fas fa-check"></i> Mensagem Enviada!';
+        submitButton.style.backgroundColor = 'var(--success)';
+        
+        setTimeout(() => {
+            e.target.reset();
+            submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+            submitButton.style.backgroundColor = 'var(--secondary)';
+            submitButton.disabled = false;
+        }, 2000);
+    }, 1500);
+});
 window.addEventListener('scroll', animateOnScroll);
